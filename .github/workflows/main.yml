@@ -1,7 +1,12 @@
 on: [ workflow_dispatch ]
 
 jobs:
-	job-one:
-		runs-on: ubuntu-latest
-		steps:
+  job-one:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl https://raw.githubusercontent.com/microsoft/winget-cli/master/schemas/JSON/manifests/v1.4.0/manifest.version.1.4.0.json
+          curl https://raw.githubusercontent.com/microsoft/winget-cli/master/schemas/JSON/manifests/v1.4.0/manifest.defaultLocale.1.4.0.json
+          curl https://raw.githubusercontent.com/Microsoft/winget-cli/master/schemas/JSON/manifests/v1.4.0/manifest.locale.1.4.0.json
+          curl https://raw.githubusercontent.com/Microsoft/winget-cli/master/schemas/JSON/manifests/v1.4.0/manifest.installer.1.4.0.json
 			
